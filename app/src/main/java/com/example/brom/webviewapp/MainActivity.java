@@ -20,10 +20,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        WebView webView = new WebView(this);
-        setContentView(webView);
-
-        webView.loadUrl("https://scio.his.se");
 
         // 1. Create a WebView element in the layout file content_main.xml
         // -- Commit and push to your github fork
