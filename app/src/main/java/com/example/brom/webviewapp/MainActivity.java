@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
 
 public class MainActivity extends AppCompatActivity {
     // Create a private member variable that can hold our WebView
@@ -20,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        WebView myWebView = (WebView) fintViewById(R.id.webview);
-        myWebView.loadUrl("https://scio.his.se");
+        WebView myWebView = (WebView) findViewById(R.id.webview);
+        myWebView.loadUrl("https://scio.his.se/portal/");
 
 
         // 1. Create a WebView element in the layout file content_main.xml
