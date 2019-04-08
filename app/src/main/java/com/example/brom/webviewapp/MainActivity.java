@@ -13,7 +13,7 @@ import android.webkit.WebView;
 
 public class MainActivity extends AppCompatActivity {
     // Create a private member variable that can hold our WebView
-
+    private WebView myWebView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         /* This code is run when the App is created. Include code that creates your WebView */
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        WebView myWebView = (WebView) findViewById(R.id.webview);
+        myWebView = (WebView) findViewById(R.id.webview);
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         myWebView.loadUrl("http://wwwlab.iit.his.se/a18filkr/mobilappdesign/App-Prototyp/start_portrait.html");
@@ -31,9 +31,6 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                WebView myWebView = (WebView) findViewById(R.id.webview);
-                WebSettings webSettings = myWebView.getSettings();
-                webSettings.setJavaScriptEnabled(true);
                 myWebView.loadUrl("file:///android_asset/about.html");
             }
         });
@@ -68,8 +65,13 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            myWebView.loadUrl("file:///android_asset/about.html");
+            return true;
+        }else if (id == R.id.action_option1){
+            myWebView.loadUrl("http://wwwlab.iit.his.se/a18filkr/mobilappdesign/App-Prototyp/start_portrait.html");
             return true;
         }
+
 
         return super.onOptionsItemSelected(item);
     }

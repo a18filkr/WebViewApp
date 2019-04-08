@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">a18filkr - assignment 1</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Intern URL</string>
+    <string name="action_option1">Extern URL</string>
 </resources>
